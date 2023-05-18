@@ -4,7 +4,9 @@
 =end
 
 def find_duplicates(arr)
-    # Your code here
+    counts = Hash.new(0)
+    arr.each { |num| counts[num] += 1 }
+    counts.select { |k, v| v > 1 }.keys
 end
   
 # Example usage
